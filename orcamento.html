@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guilherme Almeida - Engenharia e Projetos</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="icon" href="images/favicon3.ico" type="image/x-icon">
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar">
+    <div class="menu-toggle">
+        <i class="fas fa-bars"></i> <!-- Ícone do hambúrguer -->
+    </div>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="sobre-nos.html">Sobre Nós</a></li>
+        <li><a href="servicos.html">Obras</a></li>
+        <li><a href="https://www.instagram.com/eng_guilhermealmeida/" target="_blank">Portfólio</a></li>
+        <li><a href="orcamento.html">Orçamento</a></li>
+    </ul>
+</nav>
+
+
+
+<!-- Orçamento Section -->
+<section class="orcamento-section">
+    <div class="orcamento-container">
+        <!-- Contato Esquerda -->
+        <div class="contato-esquerda">
+            <div class="contato-overlay">
+                <h2 id="typing-text"> </h2>
+                <!-- <h2>Contato</h2>
+                <h3 id="typing-text"> </h3> -->
+                <p>+55 11 99182-3633</p>
+                <p>eng.guilhermeallmeida@gmail.com</p>
+                <div class="social-icons">
+                    <a href="https://api.whatsapp.com/send/?phone=5511991823633&text&type=phone_number&app_absent=0" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="https://www.instagram.com/eng_guilhermealmeida/" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Formulário Direita -->
+        <div class="formulario-direita">
+            <h2>Formulário de Orçamento</h2>
+            <form id="formOrcamento">
+                <div class="form-group">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" id="telefone" name="telefone" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="cidade">Cidade:</label>
+                    <input type="text" id="cidade" name="cidade" required>
+                </div>
+                <div class="form-group">
+                    <label for="servico">Qual serviço você está buscando?</label>
+                    <select id="servico" name="servico" required>
+                        <option value="" disabled selected>Escolha uma opção</option>
+                        <option value="Reforma de Apartamento">Reforma de Apartamento</option>
+                        <option value="Reforma de Casa">Reforma de Casa</option>
+                        <option value="Reforma Comercial">Reforma Comercial</option>
+                        <option value="Execução de Obra">Execução de Obra</option>
+                        <option value="Acompanhamento de Obra">Acompanhamento de Obra</option>
+                        <option value="Projetos">Projetos</option>
+                        <option value="ART">ART</option>
+                        <option value="Vistoria de Entrega de Chaves">Vistoria de Entrega de Chaves</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn-enviar">Enviar</button>
+            </form>            
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-container">
+        <!-- Logo e navegação -->
+        <div class="footer-logo-nav">
+            <img src="logo/LOGO PRETO.png" alt="Logo" class="footer-logo"> <!-- Substitua pelo seu logo -->
+        </div>
+        <!-- Contato e endereço -->
+        <div class="footer-contact">
+            <p>Tel: +55 11 99182-3633</p>
+            <p>Email: eng.guilhermeallmeida@gmail.com</p>
+        </div>
+        <!-- Redes Sociais -->
+        <div class="footer-social">
+            <a href="https://api.whatsapp.com/send/?phone=5511991823633&text&type=phone_number&app_absent=0" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://www.facebook.com/seuusuario" target="_blank"> <!-- Link para o Facebook -->
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/eng_guilhermealmeida/" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+    </div>
+    <!-- Direitos Autorais -->
+    <div class="footer-bottom">
+        <p>Todos os direitos reservados ©2024 por Guilherme Almeida Engenharia.</p>
+    </div>
+</footer>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>

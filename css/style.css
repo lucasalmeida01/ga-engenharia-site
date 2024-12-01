@@ -1,0 +1,1421 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /*font-family: 'Poppins', sans-serif; */
+    font-family: 'Montserrat', sans-serif;
+    /*color: #333;  */
+    
+}
+
+
+/* Navigation Bar */
+.navbar {
+    background-color: transparent; /* Fundo transparente inicial */
+    /* background-color: #000; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    /* transition: background-color 0.3s ease-in-out; Transição suave para o fundo */
+    
+}
+
+
+.nav-links {
+    display: flex;
+    gap: 40px; /* Espaçamento entre os links */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #000000; /* Torna os links brancos */
+    font-family: 'Montserrat', sans-serif; /* Fonte Montserrat */
+    font-size: 18px;
+    font-weight: 600;
+    transition: color 0.3s ease; /* Efeito de transição suave */
+}
+
+.navbar.scrolled {
+    background-color: rgba(255, 255, 255, 0.283); /* Fundo escuro translúcido ao rolar */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Sombra mais marcante */
+}
+
+.nav-links li a:hover {
+    font-weight: 700; /* Aumenta o peso para negrito */
+    color: #0d0d0d; /* Branco mais suave ao clicar */
+}
+
+
+
+
+
+/* Seção Welcome */
+/* Welcome Section */
+.welcome-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    overflow: hidden;
+}
+
+.welcome-container {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    gap: 40px;
+    align-items: center;
+}
+
+.welcome-text {
+    flex: 1;
+    color: #333;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.welcome-text h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.welcome-text p {
+    font-size: 1em;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.welcome-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.welcome-image:hover img {
+    transform: scale(1.05); /* Leve efeito de zoom ao passar o mouse */
+}
+
+
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+}
+
+/* Imagem da seção Welcome */
+.welcome-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Hero Section */
+.hero {
+    height: 100vh; /* Ocupa a altura total da tela */
+    display: flex; /* Utiliza flexbox para centralizar */
+    flex-direction: column; /* Organiza o conteúdo em coluna */
+    align-items: center; /* Centraliza horizontalmente */
+    justify-content: center; /* Centraliza verticalmente */
+    /* background-image: url('../images/interior.jpg'); Adiciona a imagem de fundo */
+    background-size: cover; /* Faz a imagem preencher o fundo */
+    background-position: center; /* Centraliza a imagem no fundo */
+    background-repeat: no-repeat; /* Evita repetição da imagem */
+    position: relative; /* Necessário para organizar o conteúdo interno */
+    text-align: center; /* Centraliza o texto */
+    color: #fff; /* Torna o texto branco */
+}
+
+/* Imagem de Fundo Desfocada */
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/sala-branca.jpg'); /* Verifique se o caminho está correto */
+    background-size: cover;
+    background-position: center;
+    filter: blur(10px); /*Aplica o desfoque na imagem de fundo */
+    z-index: 0; /* Mantém o fundo atrás do conteúdo */
+    opacity: 1;
+    margin-top: 0;
+}
+
+/* Conteúdo Principal */
+.hero-content {
+    position: relative;
+    z-index: 1; /* Coloca o conteúdo acima do fundo */
+    display: flex;
+    flex-direction: column; /* Alinha o conteúdo verticalmente */
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+    text-align: center; /* Centraliza o texto */
+    
+}
+
+.hero-text {
+    max-width: 50%; /* Texto ocupa metade da tela */
+    padding-right: 20px;
+    color: #fff; /* Garante que o texto seja branco */
+}
+
+.hero-text h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.hero-text p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Estilo do logo na tela principal */
+.main-logo {
+    width: 100%;
+    max-width: 700px; /* Tamanho máximo do logo */
+    width: auto; /* Ajusta o tamanho proporcionalmente */
+    height: auto; /* Mantém as proporções */
+    z-index: 1; /* Fica acima do fundo */
+    position: relative; /* Para permitir controle de posição */
+    animation: fadeIn 2s ease; /* Animação suave ao aparecer */
+}
+
+@media (max-width: 768px) {
+    .main-logo {
+        max-width: 100%; /* Reduz o tamanho para 70% da largura da tela */
+    }
+}
+
+@media (max-width: 480px) {
+    .main-logo {
+        max-width: 50%; /* Reduz ainda mais para telas muito pequenas */
+    }
+}
+
+
+.hero-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 30px;
+    background: linear-gradient(45deg, #000000, #333333); /* Gradiente de fundo */
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra do botão */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.hero-button:hover {
+    transform: translateY(-5px); /* Elevação ao passar o mouse */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Sombra mais intensa */
+    background: linear-gradient(45deg, #333333, #000000); /* Troca de gradiente */
+}
+
+
+
+/* Slogan */
+.main-slogan {
+    font-size: 1.8em; /* Tamanho maior para destaque */
+    font-weight: 600; /* Deixa o texto em semi-negrito */
+    color: #000000; /* Define a cor branca */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); /* Adiciona uma sombra leve ao texto */
+    animation: fadeIn 2s ease; /* Animação suave ao aparecer */
+    text-align: center; /* Centraliza o texto */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #007BFF; /* Cor do botão */
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #0056b3; /* Tom mais escuro no hover */
+}
+
+.reasons-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    overflow: hidden; /* Garante que os elementos não transbordem */
+}
+
+.reasons-container {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    gap: 40px;
+    align-items: center;
+    transition: opacity 1s ease, transform 1s ease; /* Transição suave */
+}
+
+.reasons-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 8px; /* Cantos arredondados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
+
+.reasons-image:hover img {
+    transform: scale(1.05); /* Leve efeito de zoom ao passar o mouse */
+}
+
+
+.reasons-text {
+    flex: 1;
+    color: #333;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.reasons-text h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.reasons-text h3 {
+    font-size: 1.5em;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #555;
+}
+
+.reasons-text p {
+    font-size: 1em;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+
+
+
+/* Inicialmente, elementos invisíveis e fora da posição */
+.welcome-container .welcome-text,
+.welcome-container .welcome-image,
+.reasons-container .reasons-text,
+.reasons-container .reasons-image {
+    opacity: 0; /* Invisível */
+    transform: scale(0.9) translateX(50px); /* Reduzido e deslocado */
+    transition: transform 0.8s ease, opacity 0.8s ease; /* Suavidade */
+}
+
+.welcome-container .welcome-image,
+.reasons-container .reasons-image {
+    transform: scale(0.9) translateX(-50px); /* Reduzido e deslocado para o lado oposto */
+}
+
+/* Quando visíveis, posicionam-se normalmente */
+.welcome-container.visible .welcome-text,
+.reasons-container.visible .reasons-text,
+.welcome-container.visible .welcome-image,
+.reasons-container.visible .reasons-image {
+    opacity: 1; /* Visível */
+    transform: scale(1) translateX(0); /* Voltam ao tamanho normal e central */
+}
+
+
+.custom-icon {
+    width: 24px; /* Ajuste para o tamanho desejado */
+    height: 24px;
+    margin-right: 8px; /* Espaço entre o ícone e o texto */
+    vertical-align: middle;
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 30px;
+    background-color: black;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #333;
+}
+
+
+/* Responsividade */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #000;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Exibe o botão de menu */
+    }
+
+    .nav-links {
+        display: none; /* Oculta o menu inicialmente */
+        flex-direction: column; /* Organiza os itens verticalmente */
+        position: absolute;
+        top: 50px; /* Ajuste conforme necessário */
+        right: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        padding: 20px;
+        text-align: center;
+    }
+
+    .nav-links.show {
+        display: flex; /* Mostra o menu ao ativar */
+    }
+
+    .nav-links li {
+        margin: 10px 0; /* Espaçamento entre itens no modo responsivo */
+    }
+
+    .nav-links li a {
+        color: #fff; /* Cor branca no modo responsivo */
+    }
+
+    /* Ajustes na seção Welcome */
+    .welcome-container {
+        flex-direction: column; /* Alinha o conteúdo verticalmente */
+        gap: 20px; /* Reduz o espaçamento entre os elementos */
+    }
+
+    .welcome-text {
+        text-align: center; /* Centraliza o texto */
+    }
+
+    .welcome-text h1 {
+        font-size: 1.5em; /* Reduz o tamanho do título */
+    }
+
+    .welcome-text p {
+        font-size: 0.9em; /* Reduz o tamanho do parágrafo */
+    }
+
+    .welcome-image img {
+        max-width: 80%; /* Reduz o tamanho da imagem */
+        height: auto; /* Mantém a proporção da imagem */
+        margin: 0 auto; /* Centraliza a imagem */
+        display: block; /* Garante o comportamento de bloco para centralização */
+    }
+
+    /* Ajustes na seção Reasons */
+    .reasons-container {
+        flex-direction: column; /* Alinha o conteúdo verticalmente */
+        gap: 20px; /* Reduz o espaçamento */
+    }
+
+    .reasons-text {
+        order: 1; 
+    }
+
+    .reasons-text h2 {
+        font-size: 1.8em; /* Ajusta o tamanho do título */
+    }
+
+    .reasons-text p {
+        font-size: 0.9em; /* Ajusta o tamanho do texto */
+    }
+
+    .reasons-image {
+        order: 2; /* Imagem aparece depois */
+        margin-top: 20px; /* Espaço acima da imagem */
+        max-width: 100%; /* Garante que a imagem ocupe toda a largura disponível */
+    }
+
+    .reasons-image img {
+        max-width: 80%; /* Reduz o tamanho da imagem */
+        height: auto; /* Mantém a proporção da imagem */
+        margin: 0 auto; /* Centraliza a imagem */
+        display: block; /* Garante que a imagem seja tratada como um bloco */
+    }
+
+    /* Ajustes na Hero Section */
+    .hero-content {
+        padding: 20px; /* Reduz o espaçamento interno */
+    }
+
+    .hero-button {
+        font-size: 1em; /* Reduz o tamanho do botão */
+        padding: 10px 20px;
+    }
+
+    /* Ajustes no Footer */
+    .footer-container {
+        flex-wrap: wrap; /* Permite que os elementos quebrem linha */
+        gap: 20px; /* Adiciona espaçamento entre os elementos */
+        text-align: center; /* Centraliza o conteúdo */
+    }
+
+    .footer-logo {
+        max-width: 150px; /* Ajusta o tamanho da logo */
+    }
+
+    .footer-contact, .footer-social {
+        text-align: center;
+    }
+}
+
+
+@media (max-width: 480px) {
+    /* Ajustes adicionais para telas menores */
+    .welcome-text h1 {
+        font-size: 1.2em; /* Reduz ainda mais o tamanho do título */
+    }
+
+    .welcome-text p {
+        font-size: 0.8em; /* Ajusta o tamanho do parágrafo */
+    }
+
+    .welcome-image img {
+        max-width: 150px; /* Reduz a imagem */
+    }
+
+    .reasons-text h2 {
+        font-size: 1.5em; /* Reduz o tamanho do título */
+    }
+
+    .hero-content {
+        padding: 15px; /* Reduz ainda mais o espaçamento interno */
+    }
+
+    .hero-button {
+        font-size: 0.9em; /* Reduz o tamanho do texto do botão */
+        padding: 8px 15px;
+    }
+
+    .footer-container {
+        gap: 10px; /* Reduz o espaçamento */
+    }
+
+    .footer-logo {
+        max-width: 100px; /* Reduz o tamanho da logo */
+    }
+
+    .nav-links li a {
+        font-size: 14px; /* Reduz o tamanho dos links no menu */
+    }
+}
+
+
+/* Footer */
+.footer {
+    background-color: #ffffff; /* Cor clara para o fundo do rodapé */
+    color: #020202;
+    text-align: center;
+    font-size: 14px;
+    min-height: unset; /* Remove altura mínima, se existir */
+    height: auto; /* Define altura automática */
+    padding: 0; 
+    margin: 0; /* Garante que não há margens */
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-evenly; /* Reduz o espaço entre os elementos */
+    align-items: center; /* Alinha verticalmente todos os elementos no centro */
+    flex-wrap: wrap; /* Garante que os elementos fiquem na mesma linha */
+    margin: 0 auto; /* Centraliza o container */
+    padding: 0; /* Remove qualquer padding extra */
+}
+
+.footer-logo {
+    width: 300px;
+    height: auto;
+    margin: 0 auto; /* Centraliza o logo verticalmente no seu bloco */
+    display: block; /* Garante que se comporte como um bloco */
+}
+
+
+.footer-social {
+    display: flex;
+    gap: 10px;
+}
+
+.footer-social a {
+    color: #333;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.footer-social a:hover {
+    color: #0e4d92;
+}
+
+.footer-bottom {
+    border-top: 1px solid #ddd;
+    padding-top: 5px;
+}
+
+.footer-bottom p {
+    font-size: 12px;
+    color: #666;
+}
+
+
+
+
+
+
+
+
+/* Responsividade para telas médias */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-wrap: wrap; /* Permite que os elementos quebrem linha */
+        flex-direction: column; /* Alinha os elementos verticalmente */
+        align-items: center; /* Centraliza os itens */
+        text-align: center; /* Centraliza o texto */
+        gap: 20px; /* Espaçamento entre os blocos */
+    }
+
+    .footer-logo {
+        max-width: 250px; /* Reduz o tamanho do logo */
+    }
+
+    .footer-contact p {
+        margin: 5px 0; /* Espaçamento reduzido entre linhas de texto */
+    }
+
+    .footer-social {
+        justify-content: center; /* Centraliza os ícones */
+    }
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 480px) {
+    .footer-container {
+        padding: 10px; /* Reduz o espaçamento interno */
+        gap: 15px; /* Ajusta o espaçamento entre elementos */
+    }
+
+    .footer-logo {
+        max-width: 300px; /* Reduz ainda mais o tamanho do logo */
+    }
+
+    .footer-contact p {
+        font-size: 12px; /* Reduz o tamanho do texto */
+    }
+
+    .footer-social a {
+        font-size: 16px; /* Ajusta o tamanho dos ícones */
+    }
+
+    .footer-bottom p {
+        font-size: 12px; /* Reduz o tamanho do texto de direitos autorais */
+    }
+}
+
+
+
+
+/* Seção Sobre Nós */
+.sobre-nos {
+    position: relative;
+    background: none; /* Remove o background direto da seção */
+    padding: 100px 20px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.sobre-nos::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/sala-branca.jpg'); /* Substitua pelo caminho correto */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    filter: blur(65px); /* Aplica o desfoque */
+    z-index: -1; /* Garante que o fundo fique atrás do conteúdo */
+}
+
+.sobre-nos-container {
+    position: relative; /* Torna o container independente do desfoque */
+    z-index: 1; /* Garante que o conteúdo fique acima do fundo */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    gap: 40px;
+    padding: 40px; /* Espaço ao redor do conteúdo */
+    flex-wrap: wrap; /* Permite que os elementos quebrem linha */
+}
+
+.sobre-nos-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(-100px); /* Efeito inicial */
+    opacity: 0;
+    transition: transform 0.8s ease, opacity 0.8s ease;
+}
+
+/* Estilização para a imagem do engenheiro */
+.sobre-nos-image img {
+    width: 100%;
+    max-width: 400px; /* Torna a imagem um pouco maior */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 1s ease; /* Suaviza a entrada da imagem */
+}
+
+.sobre-nos-image:hover img {
+    transform: scale(1.05); /* Leve efeito de zoom ao passar o mouse */
+}
+
+
+.sobre-nos-text {
+    flex: 1;
+    color: #000000; /* Torna o texto mais visível */
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.8;
+    display: flex;
+    flex-direction: column; /* Organiza os parágrafos em coluna */
+    gap: 20px; /* Espaçamento entre os parágrafos */
+}
+
+.sobre-nos-text h1 {
+    font-size: 2.8em;
+    margin-bottom: 20px;
+    font-weight: bold;
+    
+}
+
+.sobre-nos-text p {
+    font-size: 1.2em;
+    margin: 0;
+    text-align: justify; /* Justifica o texto */
+    
+}
+
+
+
+
+/* Quando visíveis */
+.sobre-nos-container.visible .sobre-nos-image,
+.sobre-nos-container.visible .sobre-nos-text {
+    transform: translateX(0); /* Posição normal */
+    opacity: 1; /* Totalmente visível */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .sobre-nos-container {
+        flex-direction: column; /* Alinha o conteúdo verticalmente */
+        text-align: center; /* Centraliza o texto */
+    }
+
+    .sobre-nos-image {
+        max-width: 100%; /* A imagem ocupa a largura total */
+        margin-bottom: 20px; /* Adiciona espaço entre imagem e texto */
+    }
+
+    .sobre-nos-text {
+        max-width: 100%; /* O texto ocupa a largura total */
+    }
+
+    .sobre-nos-text h1 {
+        font-size: 1.8em; /* Reduz o tamanho do título */
+    }
+
+    .sobre-nos-text p {
+        font-size: 1em; /* Ajusta o tamanho do texto */
+    }
+}
+
+@media (max-width: 480px) {
+    .sobre-nos-text h1 {
+        font-size: 1.5em; /* Reduz ainda mais o tamanho do título */
+    }
+
+    .sobre-nos-text p {
+        font-size: 0.9em; /* Ajusta o tamanho do texto */
+    }
+
+    .sobre-nos-image img {
+        max-width: 300px; /* Reduz a largura máxima da imagem */
+    }
+}
+
+
+
+
+
+
+/* Seção "Como Atuamos?" */
+.atuacao-section {
+
+    padding: 60px 20px;
+    color: #fff;
+    position: relative;
+}
+
+.atuacao-section::before {
+    background-image: url('../images/eng.jpg'); /* Fundo existente */
+    filter: blur(0px); /*Aplica o desfoque na imagem de fundo */
+    background-size: cover;
+    background-position: center;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Sobreposição escura */
+    z-index: -1;
+}
+
+.atuacao-titulo {
+    font-size: 2.5em;
+    font-weight: bold;
+    text-align: center; /* Centraliza o título */
+    margin: 40px auto; /* Espaçamento superior e inferior */
+    max-width: 80%; /* Limita a largura para evitar que ocupe muito espaço em telas grandes */
+    color: #000000; /* Mantém a cor branca */
+    animation: fadeInDown 1.5s ease forwards; /* Animação para aparecer */
+    opacity: 0; /* Inicialmente invisível */
+    transform: scale(0.8); /* Começa menor, simulando "fundo" */
+    animation: fadeInFromBackground 1.5s ease-out forwards; /* Aplica a animação */
+}
+
+
+.atuacao-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 0 20px; /* Espaçamento nas laterais */
+    max-width: 1200px; /* Define uma largura máxima */
+    margin: 0 auto; /* Centraliza o conteúdo dentro da página */
+}
+
+
+.atuacao-bloco {
+    max-width: 600px;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+    font-size: 1rem;
+    line-height: 1.8;
+    position: relative;
+    opacity: 1; /* Estado inicial invisível */
+    transform: translateY(50px);
+    transition: transform 0.8s ease;
+}
+
+.atuacao-bloco.visible {
+    transform: translateY(0);
+}
+
+.atuacao-bloco:hover {
+    transform: scale(1.08);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.atuacao-bloco h3 {
+    font-size: 1.7em;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.atuacao-bloco p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #ddd;
+}
+
+/* Alinhamento alternado */
+.atuacao-bloco.esquerdo {
+    align-self: flex-start; /* Alinha à esquerda */
+    margin-left: 0; /* Garante o espaçamento padrão */
+}
+
+.atuacao-bloco.direito {
+    align-self: flex-end; /* Alinha à direita */
+    margin-right: 0; /* Garante o espaçamento padrão */
+}
+
+
+
+
+/* Animações */
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsividade para dispositivos menores */
+@media (max-width: 768px) {
+    .atuacao-container {
+        padding: 0 10px; /* Reduz o espaçamento lateral */
+    }
+
+    .atuacao-bloco {
+        max-width: 90%; /* Faz os blocos ocuparem mais espaço em telas pequenas */
+        align-self: center; /* Centraliza os blocos */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Seção de Obras/Serviços */
+.obras-section {
+    position: relative;
+    padding: 50px 20px 0; /* Ajuste para que o título e as imagens fiquem com espaçamento adequado */
+    background: none; /* Remove fundo adicional da seção */
+}
+
+.obras-section .titulo-obras {
+    text-align: center;
+    font-size: 2.5em;
+    color: #000000; /* Combina com o estilo do fundo */
+    margin-top: 40px; /* Adiciona espaço entre a barra de navegação e o título */
+    margin-bottom: 40px; /* Espaço entre o título e as imagens */
+    text-transform: uppercase;
+    z-index: 1; /* Garante que o título fique acima do fundo */
+    opacity: 0; /* Começa invisível */
+    transform: scale(0.8); /* Começa menor, simulando "fundo" */
+    animation: fadeInFromBackground 1.5s ease-out forwards; /* Aplica a animação */
+}
+
+
+/* Defina a animação com @keyframes */
+@keyframes fadeInFromBackground {
+    from {
+        opacity: 0;
+        transform: scale(0.8); /* Começa menor */
+    }
+    to {
+        opacity: 1;
+        transform: scale(1); /* Retorna ao tamanho normal */
+    }
+}
+
+
+.obras-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/sala-branca.jpg'); /* Substitua pelo caminho correto */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    filter: blur(20px); /* Aplica o desfoque */
+    z-index: -1; /* Garante que o fundo fique atrás do conteúdo */
+}
+
+/* Grid das imagens */
+.obras-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 colunas */
+    gap: 0; /* Sem espaçamento */
+}
+
+.obra-bloco {
+    overflow: hidden;
+}
+
+.obra-bloco img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s, filter 0.5s;
+    cursor: pointer;
+}
+
+.obra-bloco img:hover {
+    transform: scale(1.1); /* Efeito de zoom */
+    filter: brightness(70%); /* Escurece levemente ao passar o mouse */
+}
+
+/* Imagem expandida */
+.expanded-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9); /* Fundo escuro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 0.5s ease; /* Animação ao aparecer */
+}
+
+.expanded-image img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px; /* Cantos arredondados */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
+}
+
+/* Adiciona uma transição suave ao fechar */
+.expanded-image-close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .obras-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas em telas médias */
+    }
+}
+
+@media (max-width: 480px) {
+    .obras-grid {
+        grid-template-columns: 1fr; /* 1 coluna em telas pequenas */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Fundo geral da seção */
+.orcamento-section {
+    position: relative;
+    padding: 120px 20px 50px; /* Espaço no topo para a navbar */
+    min-height: 100vh;
+
+}
+
+.orcamento-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/sala-branca.jpg'); /* Fundo com a imagem */
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    filter: blur(8px); /* Aplica o desfoque */
+}
+
+/* Estilo do container */
+.orcamento-container {
+    display: flex;
+    justify-content: space-between; /* Garante espaçamento uniforme entre os lados */
+    align-items: stretch; /* Faz os elementos se alinharem em altura */
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap; /* Responsividade para telas menores */
+}
+
+
+/* Bloco de Contato - Estilo para Fundo Preto e Fonte Branca */
+.contato-esquerda {
+    color: #fff; /* Garante que o texto seja branco */ 
+    flex: 1; /* Faz com que o container ocupe uma parte proporcional do espaço */
+    max-width: 45%; /* Define o tamanho máximo do lado esquerdo */
+    min-width: 300px; /* Evita que fique muito pequeno */
+    padding: 30px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+    position: relative;
+    overflow: hidden;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Adiciona sombra para contraste */
+    opacity: 0;
+    transform: translateY(30px); /* Estado inicial */
+    transition: transform 0.8s ease, opacity 0.8s ease; /* Transição */
+}
+
+
+.contato-esquerda::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../obras/orcamentofoto.jpeg'); /* Caminho da sua imagem */
+    background-size: cover; /* Faz a imagem cobrir todo o container */
+    background-position: center; /* Centraliza a imagem */
+    filter: blur(0px); /* Aplica o desfoque */
+    z-index: -1; /* Coloca o fundo atrás do conteúdo */
+    background-color: rgba(0, 0, 0, 0.5); /* Adiciona sobreposição escura */
+    mix-blend-mode: darken; /* Mistura a sobreposição com a imagem */
+}
+
+
+
+/* Estilo do Título */
+.contato-esquerda h1 {
+    font-size: 20em; /* Tamanho maior */
+    font-weight: bold;
+    margin-bottom: 10px; /* Espaço abaixo do título */
+}
+
+.contato-esquerda h2 {
+    margin-bottom: 20px; /* Adiciona espaço abaixo do título */
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+.contato-esquerda h2, .contato-esquerda p {
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6); /* Mais contraste com o fundo */
+}
+
+.contato-esquerda .contato-overlay {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinha o conteúdo à esquerda */
+    gap: 10px; /* Espaçamento entre os itens */
+    position: relative; /* Posiciona os elementos */
+}
+
+.contato-esquerda .social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    font-size: 1.5em;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #FFD700; /* Dourado no hover */
+}
+
+
+.contato-esquerda .contato-detalhes {
+    bottom: 20px; /* Fixa os textos no rodapé */
+    left: 20px; /* Adiciona margem à esquerda */
+    right: 20px; /* Adiciona margem à direita */
+    text-align: left; /* Mantém alinhado à esquerda */
+}
+
+/* Subtítulo menor */
+.contato-esquerda h3 {
+    font-size: 1.4em;
+    font-weight: 600;
+    margin-bottom: 20px; /* Espaço entre o subtítulo e o endereço */
+}
+
+/* Estilo do texto */
+.contato-esquerda p {
+    margin: 0; /* Remove margens extras */
+}
+
+.contato-esquerda .social-icons a {
+    font-size: 1.5em;
+    color: #fff; /* Ícones brancos */
+    margin-right: 15px;
+    transition: color 0.3s;
+}
+
+.contato-esquerda .social-icons a:hover {
+    color: #FFD700; /* Cor dourada ao passar o mouse */
+}
+
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    .orcamento-container {
+        flex-direction: column; /* Alinha os elementos verticalmente */
+    }
+
+    .contato-esquerda, 
+    .formulario-direita {
+        max-width: 100%; /* Cada container ocupa a largura total */
+    }
+
+    .contato-esquerda {
+        padding: 20px; /* Reduz o padding em telas menores */
+        gap: 10px; /* Reduz o espaçamento entre os elementos */
+    }
+
+    .contato-esquerda h1 {
+        font-size: 1.8em; /* Reduz o tamanho do título em telas menores */
+    }
+
+    .contato-esquerda h3 {
+        font-size: 1.2em; /* Reduz o tamanho do subtítulo */
+    }
+}
+
+
+
+
+.contato-esquerda.visible {
+    opacity: 1; /* Estado visível */
+    transform: translateY(0); /* Fim da transição */
+}
+
+.contato-esquerda:hover {
+    transform: scale(1.09); /* Aumenta ligeiramente o tamanho */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Adiciona uma sombra mais intensa */
+}
+
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.formulario-direita {
+    animation-delay: 0.4s;
+}
+
+.form-group input:focus, 
+.form-group select:focus, 
+.form-group textarea:focus {
+    border-color: #0f1113;
+    box-shadow: 0 0 5px rgba(2, 2, 2, 0.5); /* Glow */
+    outline: none; /* Remove o contorno padrão */
+    transition: box-shadow 0.2s ease;
+}
+
+
+
+
+
+/* Bloco do formulário */
+.formulario-direita {
+    flex: 2;
+    min-width: 300px;
+    background: #fff; /* Fundo branco para destaque */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    color: #333;
+}
+
+/* Estilo dos títulos */
+.formulario-direita h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+/* Formulário */
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Botão */
+.btn-enviar {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-enviar:hover {
+    background-color: #333;
+}
+
+.btn-enviar {
+    background: linear-gradient(45deg, #18191a, #727575); /* Gradiente */
+    color: #fff;
+    padding: 12px 25px;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 50px;
+    transition: background 0.3s ease;
+}
+
+.btn-enviar:hover {
+    background: linear-gradient(45deg, #b3b9be, #1a1a19); /* Gradiente mais escuro */
+}
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .orcamento-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contato-esquerda,
+    .formulario-direita {
+        width: 90%;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .contato-esquerda h1 {
+        font-size: 1.8em;
+    }
+    .contato-esquerda h2 {
+        font-size: 1.6em;
+    }
+    .contato-esquerda {
+        padding: 20px;
+    }
+}
+
+
