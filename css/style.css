@@ -229,7 +229,7 @@ body {
 
 @media (max-width: 480px) {
     .main-logo {
-        max-width: 50%; /* Reduz ainda mais para telas muito pequenas */
+        max-width: 80%; /* Reduz ainda mais para telas muito pequenas */
     }
 }
 
@@ -521,45 +521,12 @@ body {
 }
 
 
-@media (max-width: 480px) {
-    /* Ajustes adicionais para telas menores */
-    .welcome-text h1 {
-        font-size: 1.2em; /* Reduz ainda mais o tamanho do título */
-    }
 
-    .welcome-text p {
-        font-size: 0.8em; /* Ajusta o tamanho do parágrafo */
-    }
 
-    .welcome-image img {
-        max-width: 150px; /* Reduz a imagem */
-    }
+/*
+CODIGO RESPONSIVEL 480
+*/
 
-    .reasons-text h2 {
-        font-size: 1.5em; /* Reduz o tamanho do título */
-    }
-
-    .hero-content {
-        padding: 15px; /* Reduz ainda mais o espaçamento interno */
-    }
-
-    .hero-button {
-        font-size: 0.9em; /* Reduz o tamanho do texto do botão */
-        padding: 8px 15px;
-    }
-
-    .footer-container {
-        gap: 10px; /* Reduz o espaçamento */
-    }
-
-    .footer-logo {
-        max-width: 100px; /* Reduz o tamanho da logo */
-    }
-
-    .nav-links li a {
-        font-size: 14px; /* Reduz o tamanho dos links no menu */
-    }
-}
 
 
 /* Footer */
@@ -657,28 +624,7 @@ body {
 }
 
 /* Responsividade para telas pequenas */
-@media (max-width: 480px) {
-    .footer-container {
-        padding: 10px; /* Reduz o espaçamento interno */
-        gap: 15px; /* Ajusta o espaçamento entre elementos */
-    }
 
-    .footer-logo {
-        max-width: 300px; /* Reduz ainda mais o tamanho do logo */
-    }
-
-    .footer-contact p {
-        font-size: 12px; /* Reduz o tamanho do texto */
-    }
-
-    .footer-social a {
-        font-size: 16px; /* Ajusta o tamanho dos ícones */
-    }
-
-    .footer-bottom p {
-        font-size: 12px; /* Reduz o tamanho do texto de direitos autorais */
-    }
-}
 
 
 
